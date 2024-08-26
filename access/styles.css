@@ -1,0 +1,165 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Apply a consistent box model and font styling across the site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif; /* Default font for the entire site */
+}
+
+/* Body styling */
+body {
+    background: url("./background.png") no-repeat; /* Background image for the body */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* Styling for text selection */
+::selection {
+    background: #72469a; /* Background color when text is selected */
+    color: #ffffff; /* Text color when selected */
+}
+
+/* Header and navigation styling */
+header nav {
+    display: flex; /* Flexbox layout for the navigation */
+    align-items: center; /* Center items vertically */
+    justify-content: space-around; /* Space items evenly */
+    width: 100%; /* Full width of the viewport */
+    padding: 1em 20px; /* Padding around the navigation */
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 999; /* Ensure it stays on top of other elements */
+}
+
+header nav ul {
+    display: flex; /* Flexbox layout for the list items */
+    list-style: none; /* Remove default list styling */
+}
+
+header nav ul li a {
+    color: #ffffff; /* Text color for navigation links */
+    font-size: 17px; /* Font size for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 13px; /* Horizontal spacing between links */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+header nav .logo a {
+    color: #f1e8e8; /* Color for the logo text */
+    font-size: 32px; /* Larger font size for the logo */
+    text-decoration: none; /* Remove underline from logo link */
+    text-transform: uppercase; /* Convert logo text to uppercase */
+}
+
+header nav .logo i {
+    margin: 0 4px; /* Margin around the icon within the logo */
+}
+
+header nav ul li a.active {
+    background: #72469a; /* Background color for the active link */
+    padding: 30px; /* Extra padding for the active link */
+}
+
+/* Home section styling */
+.home {
+    display: grid; /* Grid layout for the home section */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    align-items: center; /* Center items vertically within the grid */
+    gap: 2rem; /* Spacing between grid items */
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full viewport height */
+    padding: 8% 10%; /* Padding around the home section */
+}
+
+/* Styling for the home text section */
+.home .home-text h1 {
+    font-size: 55px; /* Font size for the main heading */
+    color: #ffffff; /* Text color */
+    line-height: 80px; /* Line height for spacing between lines */
+    margin: 0 0 15px; /* Margin below the heading */
+    font-weight: 600; /* Font weight for bold text */
+    width: 90%; /* Width of the heading text block */
+    font-family: "Inter", sans-serif; /* Font family for the heading */
+}
+
+.home .home-text p {
+    font-size: 17px; /* Font size for paragraph text */
+    color: #ffffff; /* Text color */
+    line-height: 35px; /* Line height for paragraph spacing */
+    margin: 0 0 15px; /* Margin below the paragraph */
+}
+
+/* Styling for the home image */
+.home .home-image img {
+    width: 500px; /* Width of the image */
+    height: 500px; /* Height of the image */
+    border-radius: 50%; /* Circular image with border-radius */
+}
+
+/* Styling for control buttons */
+.home .home-text .control {
+    display: flex; /* Flexbox layout for control buttons */
+    margin: 0 0 15px; /* Margin below the control section */
+}
+
+.home .home-text .control:nth-child(2) {
+    margin: 0 10px; /* Horizontal margin for the second control button */
+}
+
+.home .home-text .control button {
+    width: 150px; /* Width of the buttons */
+    padding: 8px 12px 8px; /* Padding inside the buttons */
+    border-radius: 8px; /* Rounded corners for the buttons */
+    font-size: 16px; /* Font size for button text */
+    border: none; /* Remove default button border */
+}
+
+.home .home-text .control:first-child button {
+    background: #000000; /* Background color for the first button */
+    color: #ffffff; /* Text color for the button */
+    border: 2px solid #656565; /* Border color for the button */
+}
+
+.home .home-text .control:last-child button {
+    background: #ffffff; /* Background color for the second button */
+    margin: 0 8px; /* Horizontal margin around the button */
+}
+
+/* Styling for statistics section */
+.home .home-text .stats {
+    display: flex; /* Flexbox layout for statistics items */
+}
+
+.home .home-text .stats .one-stats {
+    background: #000000; /* Background color for each stats item */
+    padding: 20px; /* Padding inside the stats item */
+    border-radius: 20px; /* Rounded corners for the stats item */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all ease-in-out 0.55s; /* Smooth transition for hover effects */
+}
+
+.home .home-text .stats .one-stats:nth-child(2) {
+    border: 3px solid #f1a722; /* Border color for the second stats item */
+    margin: 0 20px; /* Horizontal margin around the second stats item */
+}
+
+.home .home-text .stats .one-stats:hover {
+    transform: scale(1.2); /* Scale up the stats item on hover */
+}
+
+.home .home-text .stats .one-stats .number {
+    font-size: 37px; /* Font size for the number in the stats item */
+    color: #ffffff; /* Text color for the number */
+    font-weight: 400; /* Font weight for the number text */
+}
+
+.home .home-text .stats .one-stats .title {
+    font-size: 14px; /* Font size for the title in the stats item */
+    color: #ffffff; /* Text color for the title */
+}
